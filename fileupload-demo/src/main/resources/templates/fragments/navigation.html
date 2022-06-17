@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html th:fragment="layout (content)" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns="http://www.w3.org/1999/html">
+<body>
+
+	<nav th:fragment="navigation" class="navbar navbar-expand-md navbar-dark bg-dark text-white">
+	    <a class="navbar-brand" href="#" th:href="@{/}">Management</a>
+	        <div class="navbar-nav">
+	            <a class="nav-link" href="#" th:href="@{/}">Staff<i class="fas fa-book"></i></a> 	
+	        </div>
+	        <div class="navbar-nav">
+	            <a class="nav-link" href="#" th:href="@{/show}">List<i class="fas fa-book"></i></a> 	
+	        </div>
+	</nav>
+
+
+</body>
+</html>

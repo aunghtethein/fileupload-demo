@@ -1,0 +1,35 @@
+<!doctype html>
+<html th:replace="~{layouts/main :: layout(~{::main})}"
+	xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<main role="main">
+		<div class="container jumbotron mt-5">
+			<div class="col-md-12 mt-5" th:unless="${#lists.isEmpty(staffs)}">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Signature</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="s : ${staffs}">
+							<td th:text="${s.id}"></td>
+							<td th:text="${s.name}"></td>
+							<td>
+								<img th:src="@{${s.signaturePath}}" style="width: 100px">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+		</div>
+
+	</main>
+</body>
+</html>
